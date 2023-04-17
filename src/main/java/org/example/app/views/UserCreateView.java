@@ -11,9 +11,6 @@ public class UserCreateView {
         Scanner scanner = new Scanner(System.in);
         User user = new User();
 
-        // Ввод и санитизация данных.
-        // Санитизация через trim().
-
         String title = "Enter first name: ";
         System.out.print(title);
         user.setFirstName(scanner.nextLine().trim());
@@ -36,7 +33,6 @@ public class UserCreateView {
         return user;
     }
 
-    // Вывод уведомления
     public void getOutput(String output) {
         System.out.println(output);
     }

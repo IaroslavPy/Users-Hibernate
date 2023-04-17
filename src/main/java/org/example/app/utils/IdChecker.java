@@ -7,7 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-// Класс-проверка наличия id в БД
 public class IdChecker {
 
     public static boolean isIdExists(User user) {

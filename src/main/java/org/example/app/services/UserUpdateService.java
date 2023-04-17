@@ -34,7 +34,6 @@ public class UserUpdateService {
     }
 
     private Map<String, String> validateData(User user) {
-        // Map для сбора ошибок
         Map<String, String> errors = new HashMap<>();
 
         if (Integer.toString(user.getId()).isEmpty())

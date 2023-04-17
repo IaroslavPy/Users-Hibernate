@@ -14,9 +14,7 @@ public class UserDeleteRepository {
         Transaction transaction = null;
 
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            // Транзакция стартует
             transaction = session.beginTransaction();
-            // Удаление объекта сущности
             user = session.get(User.class, user.getId());
 
             if (user != null) {
@@ -25,7 +23,6 @@ public class UserDeleteRepository {
                 query.setParameter("id", user.getId());
                 query.executeUpdate();
             }
-            // Транзакция выполняется
             transaction.commit();
             return Constants.DATA_DELETE_MSG;
         } catch (Exception e) {

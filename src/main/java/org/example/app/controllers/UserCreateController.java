@@ -15,11 +15,7 @@ public class UserCreateController {
     }
 
     public void createUser() {
-        // Получаем входные данные.
-        // Передаем данные на обработку, получаем результат.
-        // Выводим результат.
         view.getOutput(service.createUser(view.getData()));
-        // Перезапускаем приложение.
         AppStarter.startApp();
     }
 }

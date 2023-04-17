@@ -17,14 +17,9 @@ public class UserReadService {
 
     public String readUsers() {
 
-        // Получаем данные в коллекцию.
         List<User> list = repository.readUsers();
 
-        // Если коллекция не null, формируем вывод.
-        // Иначе уведомление об отсутствии данных.
         if (list != null) {
-            // Если коллекция не пуста, формируем вывод.
-            // Иначе уведомление об отсутствии данных.
             if (!list.isEmpty()) {
                 AtomicInteger count = new AtomicInteger(0);
                 StringBuilder stringBuilder = new StringBuilder();

@@ -37,8 +37,6 @@ public class AppView {
 
     public void getOutput(int choice, String output) {
         if (choice == 0) System.out.println(output);
-        // Scanner лучше закрыть здесь,
-        // т.к. в этом методе завершаем программу.
         scanner.close();
         System.exit(0);
     }

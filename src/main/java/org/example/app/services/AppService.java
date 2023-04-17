@@ -62,7 +62,6 @@ public class AppService {
         }
     }
 
-    // Проверка наличия ввода в массиве выбора
     public static boolean contains(final int[] options, final int value) {
         boolean result = false;
         for (int i : options) {

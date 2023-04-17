@@ -6,7 +6,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-// Класс-коннектор к БД.
 public class DBConn {
 
     public static Connection connect() {

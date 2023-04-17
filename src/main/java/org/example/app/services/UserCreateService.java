@@ -34,7 +34,6 @@ public class UserCreateService {
     }
 
     private Map<String, String> validateData(User user) {
-        // Map для сбора ошибок
         Map<String, String> errors = new HashMap<>();
 
         if (user.getFirstName().isEmpty())

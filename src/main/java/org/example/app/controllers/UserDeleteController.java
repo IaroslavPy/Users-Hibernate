@@ -15,11 +15,7 @@ public class UserDeleteController {
     }
 
     public void deleteUser() {
-        // Получаем входные данные.
-        // Передаем данные на обработку, получаем результат.
-        // Выводим результат.
         view.getOutput(service.deleteUser(view.getData()));
-        // Перезапускаем приложение.
         AppStarter.startApp();
     }
 }

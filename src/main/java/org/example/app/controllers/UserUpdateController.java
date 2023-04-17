@@ -15,11 +15,7 @@ public class UserUpdateController {
     }
 
     public void updateUser() {
-        // Получаем входные данные.
-        // Передаем данные на обработку, получаем результат.
-        // Выводим результат.
         view.getOutput(service.updateUser(view.doInputs()));
-        // Перезапускаем приложение.
         AppStarter.startApp();
     }
 }

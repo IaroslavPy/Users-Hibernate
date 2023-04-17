@@ -11,8 +11,7 @@ public class UserReadRepository {
     public List<User> readUsers() {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.createQuery("FROM User", User.class).list();
-        }catch (Exception e) {
-            // Если ошибка - возвращаем пустую коллекцию
+        } catch (Exception e) {
             return Collections.emptyList();
         }
     }

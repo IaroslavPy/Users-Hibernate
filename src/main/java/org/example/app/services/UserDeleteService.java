@@ -14,9 +14,6 @@ public class UserDeleteService {
     }
 
     public String deleteUser(User user) {
-        // Проверяем на наличие id в БД.
-        // ДА - работаем с данными.
-        // НЕТ - уведомление об отсутствии id.
         if (IdChecker.isIdExists(user)) {
             return repository.deleteUser(user);
         } else {

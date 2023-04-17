@@ -16,10 +16,7 @@ public class UserReadController {
     }
 
     public void readUsers() {
-        // Передаем запрос на получение данных,
-        // получаем ответ, отдаем на вывод.
         view.getOutput(service.readUsers());
-        // Перезапускаем приложение.
         AppStarter.startApp();
     }
 }
