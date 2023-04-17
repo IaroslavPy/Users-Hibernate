@@ -31,12 +31,13 @@ public class UserCreateRepository {
             // Транзакция стартует
             transaction = session.beginTransaction();
 
-            String hql = "INSERT INTO User (firstName, lastName, phone, email) " +
-                    "VALUES (:firstName, :lastName, :phone, :email)";
+            String hql = "INSERT INTO User (firstName, lastName, nickName, phone, email) " +
+                    "VALUES (:firstName, :lastName, :nickName, :phone, :email)";
 
             MutationQuery query = session.createMutationQuery(hql);
             query.setParameter("firstName", user.getFirstName());
             query.setParameter("lastName", user.getLastName());
+            query.setParameter("nickName", user.getNickName());
             query.setParameter("phone", user.getPhone());
             query.setParameter("email", user.getEmail());
             query.executeUpdate();
@@ -44,7 +45,7 @@ public class UserCreateRepository {
             // Транзакция выполняется
             transaction.commit();
             return Constants.DATA_INSERT_MSG;
-         } catch (Exception e) {
+        } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
             }

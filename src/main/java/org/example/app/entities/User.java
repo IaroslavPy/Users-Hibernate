@@ -12,7 +12,7 @@ import jakarta.persistence.*;
 // @Table(name = "contacts")
 // Указывает таблицу в БД, с которой сопоставлен этот объект.
 @Entity
-@Table(name = "contacts")
+@Table(name = "users")
 public class User {
 
     // @Id
@@ -42,6 +42,9 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
+    @Column(name = "nick_name")
+    private String nickName;
+
     @Column(name = "phone")
     private String phone;
 
@@ -51,10 +54,11 @@ public class User {
     public User() {
     }
 
-    public User(int id, String firstName, String lastName, String phone, String email) {
+    public User(int id, String firstName, String lastName, String nickName, String phone, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.nickName = nickName;
         this.phone = phone;
         this.email = email;
     }
@@ -81,6 +85,14 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getPhone() {

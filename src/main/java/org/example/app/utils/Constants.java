@@ -8,14 +8,14 @@ public final class Constants {
     public final static String PATH_CREDS = "credentials/";
 
     public final static String DB_JDBC = "jdbc:mysql://localhost:3306/";
-    public final static String DB_NAME = "contacts_hibernate_db";
+    public final static String DB_NAME = "users_hibernate_db";
 
     public final static String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
-    public final static String DB_URL = "jdbc:mysql://localhost:3306/contacts_hibernate_db?";
+    public final static String DB_URL = "jdbc:mysql://localhost:3306/users_hibernate_db?";
     public final static String DB_USER = "devPy";
     public final static String DB_PASS = PassReader.readPass();
 
-    public final static String TABLE_CONTACTS = "contacts";
+    public final static String TABLE_CONTACTS = "users";
 
     // Регулярное выражение для номера телефона формата xxx xxx-xxxx
     public final static String PHONE_RGX = "[0-9]{3}[\\ ][0-9]{3}-[0-9]{4}";

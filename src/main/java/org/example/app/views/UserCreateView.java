@@ -21,6 +21,9 @@ public class UserCreateView {
         title = "Enter last name: ";
         System.out.print(title);
         user.setLastName(scanner.nextLine().trim());
+        title = "Enter nick name: ";
+        System.out.print(title);
+        user.setNickName(scanner.nextLine().trim());
 
         title = "Enter phone in format xxx xxx-xxxx: ";
         System.out.print(title);

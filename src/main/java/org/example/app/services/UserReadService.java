@@ -37,6 +37,8 @@ public class UserReadService {
                                 .append(" ")
                                 .append(user.getLastName())
                                 .append(", ")
+                                .append(user.getNickName())
+                                .append(", ")
                                 .append(user.getPhone())
                                 .append(", ")
                                 .append(user.getEmail())

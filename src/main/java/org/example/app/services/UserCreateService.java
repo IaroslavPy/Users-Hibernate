@@ -43,6 +43,9 @@ public class UserCreateService {
         if (user.getLastName().isEmpty())
             errors.put("last name", Constants.INPUT_REQ_MSG);
 
+        if (user.getNickName().isEmpty())
+            errors.put("nick name", Constants.INPUT_REQ_MSG);
+
         if (PhoneValidator.isPhoneValid(user.getPhone()))
             errors.put("phone", Constants.WRONG_PHONE_MSG);
 
